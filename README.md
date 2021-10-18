@@ -2,11 +2,7 @@
 
 # Math Magicians
 
-> Virtual calculator created with React.
-
-## Preview
-
-![image](./preview.jpg)
+> Virtual calculator created with React. (Work in Progress)
 
 ## Built With
 
