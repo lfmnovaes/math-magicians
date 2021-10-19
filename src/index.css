@@ -16,12 +16,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family:
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
-    monospace;
+.calc {
+  width: 100vh;
+}
+
+.calc-label {
+  text-align: right;
+}
+
+.calc-keys {
+  margin: 0 auto;
 }
