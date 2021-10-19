@@ -1,7 +1,7 @@
 :root {
-  --primary: orange;
-  --secondary: lightgray;
-  --dark: darkgray;
+  --operator: orange;
+  --dark: #777;
+  --light: lightgray;
   --ws: whitesmoke;
 }
 
@@ -46,13 +46,8 @@
   flex-wrap: wrap;
 }
 
-.operators button {
-  flex: 1 1 0%;
-  min-width: 125px;
-  background-color: var(--primary);
-}
-
 button {
+  border: 1px solid var(--light);
   display: flex;
   flex: 0 1 33.33%;
   justify-content: center;
@@ -62,13 +57,29 @@ button {
   font-size: 20px;
   padding: 16px;
   cursor: pointer;
-  transition: 0.4s;
+  transition: 0.2s;
 }
 
-button:hover {
-  opacity: 0.9;
+.operators button {
+  flex: 0 1 0%;
+  min-width: 125px;
+  background-color: var(--operator);
 }
 
 #zero {
   flex-grow: 2;
+}
+
+button:hover {
+  opacity: 0.6;
+}
+
+button:active {
+  opacity: 0.2;
+  transition: all 0.4s;
+}
+
+button:active::after {
+  opacity: 1;
+  transition: 0s;
 }
