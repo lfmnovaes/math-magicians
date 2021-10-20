@@ -1,27 +1,85 @@
-body {
-  margin: 0;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --operator: orange;
+  --dark: #777;
+  --light: lightgray;
+  --ws: whitesmoke;
 }
 
-code {
-  font-family:
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.calculator {
+  text-align: right;
+  width: 100%;
+  max-width: 500px;
+  overflow: hidden;
+  box-shadow: 0 0 25px 0 var(--dark);
+}
+
+.display {
+  font-size: 30px;
+  padding: 10px;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: var(--dark);
+}
+
+.display span {
+  color: white;
+}
+
+.keyboard {
+  display: flex;
+}
+
+.digits {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.operators {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+button {
+  border: 1px solid var(--light);
+  display: flex;
+  flex: 0 1 33.33%;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  color: black;
+  font-size: 20px;
+  padding: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.operators button {
+  flex: 0 1 0%;
+  min-width: 125px;
+  background-color: var(--operator);
+}
+
+#zero {
+  flex-grow: 2;
+}
+
+button:hover {
+  opacity: 0.6;
+}
+
+button:active {
+  opacity: 0.2;
+  transition: all 0.4s;
+}
+
+button:active::after {
+  opacity: 1;
+  transition: 0s;
 }
