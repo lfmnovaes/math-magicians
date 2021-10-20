@@ -9,6 +9,10 @@
 - Node.js
 - React
 
+## Preview
+
+![image](./preview.png)
+
 ## Live Demo
 
 [Live Demo Link](https://lfmnovaes.github.io/math-magicians/)
