@@ -1,40 +1,60 @@
 import React from 'react';
+import calculate from '../logic/calculate';
 
 class Calculator extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      total: null,
+      next: null,
+    };
   }
 
+  onClickHandler = (e) => {
+    this.setState((prev) => calculate(prev, e.target.name));
+  };
+
+  handleDisplay = (total, next) => {
+    if (total === null && next == null) {
+      return 0;
+    }
+    if (next === null) {
+      return total;
+    }
+    return next;
+  };
+
   render() {
+    const { total, next } = this.state;
+
     return (
       <div className="calculator">
         <div className="display">
-          <span>0</span>
+          <span>{this.handleDisplay(total, next)}</span>
         </div>
         <div className="keyboard">
           <div className="digits">
-            <button type="button">AC</button>
-            <button type="button">+/-</button>
-            <button type="button">%</button>
-            <button type="button">7</button>
-            <button type="button">8</button>
-            <button type="button">9</button>
-            <button type="button">4</button>
-            <button type="button">5</button>
-            <button type="button">6</button>
-            <button type="button">3</button>
-            <button type="button">2</button>
-            <button type="button">1</button>
-            <button id="zero" type="button">0</button>
-            <button type="button">.</button>
+            <button onClick={this.onClickHandler} type="button" name="AC">AC</button>
+            <button onClick={this.onClickHandler} type="button" name="+/-">+/-</button>
+            <button onClick={this.onClickHandler} type="button" name="%">%</button>
+            <button onClick={this.onClickHandler} type="button" name="7">7</button>
+            <button onClick={this.onClickHandler} type="button" name="8">8</button>
+            <button onClick={this.onClickHandler} type="button" name="9">9</button>
+            <button onClick={this.onClickHandler} type="button" name="4">4</button>
+            <button onClick={this.onClickHandler} type="button" name="5">5</button>
+            <button onClick={this.onClickHandler} type="button" name="6">6</button>
+            <button onClick={this.onClickHandler} type="button" name="1">1</button>
+            <button onClick={this.onClickHandler} type="button" name="2">2</button>
+            <button onClick={this.onClickHandler} type="button" name="3">3</button>
+            <button onClick={this.onClickHandler} type="button" name="0">0</button>
+            <button onClick={this.onClickHandler} type="button" name=".">.</button>
           </div>
           <div className="operators">
-            <button type="button">/</button>
-            <button type="button">x</button>
-            <button type="button">-</button>
-            <button type="button">+</button>
-            <button type="button">=</button>
+            <button onClick={this.onClickHandler} type="button" name="÷">÷</button>
+            <button onClick={this.onClickHandler} type="button" name="x">x</button>
+            <button onClick={this.onClickHandler} type="button" name="-">-</button>
+            <button onClick={this.onClickHandler} type="button" name="+">+</button>
+            <button onClick={this.onClickHandler} type="button" name="=">=</button>
           </div>
         </div>
       </div>
