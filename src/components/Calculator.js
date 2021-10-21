@@ -1,4 +1,5 @@
 import React from 'react';
+import CalcKey from './CalcKey';
 
 class Calculator extends React.Component {
   constructor(props) {
@@ -14,27 +15,29 @@ class Calculator extends React.Component {
         </div>
         <div className="keyboard">
           <div className="digits">
-            <button type="button">AC</button>
-            <button type="button">+/-</button>
-            <button type="button">%</button>
-            <button type="button">7</button>
-            <button type="button">8</button>
-            <button type="button">9</button>
-            <button type="button">4</button>
-            <button type="button">5</button>
-            <button type="button">6</button>
-            <button type="button">3</button>
-            <button type="button">2</button>
-            <button type="button">1</button>
-            <button id="zero" type="button">0</button>
-            <button type="button">.</button>
+            <CalcKey text="AC" />
+            <CalcKey text="+/-" />
+            <CalcKey text="%" />
+            <CalcKey text="7" />
+            <CalcKey text="8" />
+            <CalcKey text="9" />
+            <CalcKey text="4" />
+            <CalcKey text="5" />
+            <CalcKey text="6" />
+            <CalcKey text="1" />
+            <CalcKey text="2" />
+            <CalcKey text="3" />
+            <div className="zero">
+              <CalcKey text="0" />
+            </div>
+            <CalcKey text="." />
           </div>
           <div className="operators">
-            <button type="button">/</button>
-            <button type="button">x</button>
-            <button type="button">-</button>
-            <button type="button">+</button>
-            <button type="button">=</button>
+            <CalcKey text="/" />
+            <CalcKey text="x" />
+            <CalcKey text="-" />
+            <CalcKey text="+" />
+            <CalcKey text="=" />
           </div>
         </div>
       </div>

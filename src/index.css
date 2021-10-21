@@ -58,6 +58,7 @@ button {
   padding: 16px;
   cursor: pointer;
   transition: 0.2s;
+  width: -webkit-fill-available;
 }
 
 .operators button {
@@ -66,7 +67,7 @@ button {
   background-color: var(--operator);
 }
 
-#zero {
+.zero {
   flex-grow: 2;
 }
 
