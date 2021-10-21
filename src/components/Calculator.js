@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import calculate from '../logic/calculate';
 
 const Calculator = () => {
-  const [getState, setState] = useState({});
+  const [states, setState] = useState({});
 
   const onClickHandler = (e) => {
-    setState((prev) => calculate(prev, e.target.name));
+    setState(calculate(states, e.target.name));
   };
 
   const handleDisplay = () => {
-    const { total, next } = getState;
+    const { total, next } = states;
     if (total === null && next == null) {
       return 0;
     }
