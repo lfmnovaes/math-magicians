@@ -14,8 +14,8 @@ class Calculator extends React.Component {
     this.setState((prev) => calculate(prev, e.target.name));
   };
 
-  handleDisplay = (next, total) => {
-    if (next == null && total === null) {
+  handleDisplay = (total, next) => {
+    if (total === null && next == null) {
       return 0;
     }
     if (next === null) {
