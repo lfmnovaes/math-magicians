@@ -58,17 +58,12 @@ button {
   padding: 16px;
   cursor: pointer;
   transition: 0.2s;
-  width: -webkit-fill-available;
 }
 
 .operators button {
   flex: 0 1 0%;
   min-width: 125px;
   background-color: var(--operator);
-}
-
-.zero {
-  flex-grow: 2;
 }
 
 button:hover {
@@ -83,4 +78,8 @@ button:active {
 button:active::after {
   opacity: 1;
   transition: 0s;
+}
+
+.digits button:nth-last-child(2) {
+  flex-grow: 2;
 }
