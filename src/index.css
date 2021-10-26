@@ -11,6 +11,13 @@
   box-sizing: border-box;
 }
 
+.calc-page {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
 .calculator {
   text-align: right;
   width: 100%;
