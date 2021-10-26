@@ -15,9 +15,9 @@ export default function App() {
     <Router>
       <Nav />
       <Switch>
-        <Router exact path="/">
+        <Route exact path="/">
           <Home />
-        </Router>
+        </Route>
         <Route path="/calc">
           <CalculatorPage />
         </Route>
