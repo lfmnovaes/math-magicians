@@ -1,7 +1,63 @@
-.App {
+.navbar {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.navbar-brand {
+  font-size: 40px;
+  padding-left: 8px;
+}
+
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  text-align: left;
+  padding-right: 8px;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: blue;
+}
+
+.nav-item:hover {
+  color: darkblue;
+}
+
+.active {
+  font-weight: bold;
+}
+
+li > span {
+  margin: 0 10px;
+}
+
+.home-page {
+  margin: 20px;
+}
+
+.home-page > p {
+  margin: 20px 0;
+}
+
+.calc-page {
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.calculator {
+  text-align: right;
+  width: 100%;
+  max-width: 500px;
+  overflow: hidden;
+  box-shadow: 0 0 25px 0 var(--dark);
+}
+
+.quote-page {
+  margin-top: 20px;
+  text-align: center;
+  padding: 20px;
 }
