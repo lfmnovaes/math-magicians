@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Quote() {
+export default function QuotePage() {
   return (
     <div className="quote-page">
       <h3>Pure mathematics is, in its way, the poetry of logical ideas.</h3>

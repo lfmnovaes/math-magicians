@@ -57,5 +57,7 @@ li > span {
 }
 
 .quote-page {
+  margin-top: 20px;
+  text-align: center;
   padding: 20px;
 }

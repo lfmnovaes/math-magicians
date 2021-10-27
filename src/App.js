@@ -5,9 +5,9 @@ import {
   Route,
 } from 'react-router-dom';
 import Nav from './components/Nav';
-import Home from './pages/Home';
+import HomePage from './pages/HomePage';
 import CalculatorPage from './pages/CalculatorPage';
-import Quote from './pages/Quote';
+import QuotePage from './pages/QuotePage';
 import './App.css';
 
 export default function App() {
@@ -16,13 +16,13 @@ export default function App() {
       <Nav />
       <Switch>
         <Route exact path="/">
-          <Home />
+          <HomePage />
         </Route>
         <Route path="/calc">
           <CalculatorPage />
         </Route>
         <Route path="/quote">
-          <Quote />
+          <QuotePage />
         </Route>
       </Switch>
     </Router>
