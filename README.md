@@ -15,10 +15,7 @@
 
 ## Live Demo
 
-[[Gh-Pages](https://lfmnovaes.github.io/math-magicians/)] - 
-[[Netlify](https://math-magicians-lfmn.netlify.app/)] - 
-[[Heroku](https://math-magicians-lfmn.herokuapp.com/)]
-
+[[Netlify](https://math-magicians-lfmn.netlify.app/)]
 
 ## Prerequisites
 
